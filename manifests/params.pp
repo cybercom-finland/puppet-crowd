@@ -6,7 +6,7 @@ class crowd::params {
     'Redhat': {
       $shell = '/sbin/nologin'
 
-      if $::operatingsystemmajrelease == '7' {
+      if versioncmp($::operatingsystemmajrelease, '7') >= 0 {
         $service_file     = '/usr/lib/systemd/system/crowd.service'
         $service_template = 'crowd/crowd.service.erb'
         $service_mode     = '0644'
