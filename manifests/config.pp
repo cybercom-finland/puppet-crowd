@@ -85,7 +85,7 @@ class crowd::config {
 
   }
   else {
-    $_log_valvue_changes = undef
+    $_log_valve_changes = undef
   }
 
   if $crowd::tomcat_address {
